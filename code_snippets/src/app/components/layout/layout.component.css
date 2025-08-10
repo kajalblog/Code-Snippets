@@ -1,0 +1,19 @@
+.modern-card {
+  position: relative;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding-left: 1rem;
+}
+
+.modern-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px; /* left border thickness */
+  height: 100%;
+  background: linear-gradient(180deg, #4e54c8, #8f94fb); /* change gradient here */
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}

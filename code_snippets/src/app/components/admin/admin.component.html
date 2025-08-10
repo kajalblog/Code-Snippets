@@ -1,0 +1,41 @@
+<div class="d-flex">
+  <!-- Sidebar (only shown when visible) -->
+  <ng-container *ngIf="isSidebarVisible">
+    <div
+      class="sidebar  text-white"
+      [ngStyle]="{
+        width: sidebarWidth + 'px',
+        position: isMobile ? 'fixed' : 'relative',
+        zIndex: isMobile ? 1050 : 'auto',
+        height: '100vh',
+        top: '0',
+        left: '0'
+      }"
+    >
+      <app-sidebar
+        [isMobile]="isMobile"
+        (close)="toggleSidebar()"
+      ></app-sidebar>
+    </div>
+  </ng-container>
+
+  <!-- Overlay for mobile (click to close sidebar) -->
+  <div
+    *ngIf="isSidebarVisible && isMobile"
+    class="position-fixed top-0 start-0 w-100 h-100"
+    style="background-color: rgba(0,0,0,0.5); z-index:1040;"
+    (click)="toggleSidebar()"
+  ></div>
+
+  <!-- Main Content -->
+  <div
+  class="flex-grow-1 w-100"
+  [class.content-shifted]="!isMobile && isSidebarVisible"
+>
+    <app-navbar (toggle)="toggleSidebar()"></app-navbar>
+
+    <div class="p-3 bg-light" style="min-height: 100vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

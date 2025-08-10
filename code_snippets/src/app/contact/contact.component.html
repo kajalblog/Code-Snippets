@@ -1,0 +1,8 @@
+{{Result}}
+<input type="text" [(ngModel)]="Result" #Message>
+<select [(ngModel)]="Result" (ngModelChange)="onRoleChange($event)">
+    <option value="User">User</option>
+    <option value="Guest">Guest</option>
+</select>
+
+<!-- <button (click)="sendMsg(Message)">Send Message</button> -->

@@ -1,0 +1,30 @@
+
+<h1>User Profile</h1>
+<br>
+<h3 #userList>
+    User Name is : - {{name}}  Role :{{isAdmin ?'Admin':'User'}}   Sallary  {{sallary}}
+</h3>
+<!-- <button [style.backgroundColor]="bgColor" (click)="sendData()">Send Data</button> -->
+ <!-- Normal property binding instead of this we can use custom directive for this -->
+<button   (click)="sendData()">Send Data</button>
+<!-- {{showMsg}} -->
+<!-- <h2 appHighlight="showMsg">Message Copied</h2> -->
+
+<button class="btn btn-primary" (click)="openModal()">Open Modal</button>
+
+<div #myModal class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">My Modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This is a modal opened via ViewChild!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

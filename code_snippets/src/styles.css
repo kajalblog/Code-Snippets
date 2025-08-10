@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.sidebar-expanded {
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+.sidebar-collapsed {
+  width: 70px;
+  transition: width 0.3s ease;
+}
+
+.nav-link i {
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+}
+
+.sidebar {
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb); /* gradient */
+
+}
+
+
+
+
+
+
+.flex-grow-1 {
+  transition: margin-left 0.3s ease;
+}
+
+.content-shifted {
+  /* margin-left: 300px;  */
+  transition: margin-left 0.3s ease;
+}

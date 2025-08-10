@@ -1,0 +1,142 @@
+.dynamic-card {
+  position: relative;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding-left: 1rem;
+  background-color: #fff;
+}
+
+/* dynamic gradient left border */
+.dynamic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--card-border-color);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.table-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.custom-table thead {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  color: white;
+}
+
+.custom-table thead th {
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: none;
+  vertical-align: middle;
+}
+
+.custom-table tbody tr {
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #eef0ff;
+}
+
+.custom-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.custom-table thead tr {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb); /* gradient */
+}
+
+.custom-table thead th {
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  background: transparent !important; /* force background to inherit */
+}
+
+/* Fix gradient header */
+.custom-table thead tr {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  /* background: linear-gradient(to right, #ff6a00, #ee0979); */
+/* background: linear-gradient(to right, #f12711, #a73737, #7f00ff); */
+/* background: linear-gradient(to right, #f7971e, #8e44ad); */
+/* background: linear-gradient(to right, #ff7f50, #800080); */
+/* background: linear-gradient(to right, #d63384, #6f42c1); */
+/* background: linear-gradient(90deg, #6a0dad, #f493f9); */
+
+  /* background: linear-gradient(90deg, #00c6ff, #0072ff); */
+/* background: linear-gradient(90deg, #ff9a9e, #fad0c4); */
+/* background: linear-gradient(90deg, #ff6a00, #ee0979); */
+/* background: linear-gradient(90deg, #8e9eab, #eef2f3); */
+/* background: linear-gradient(90deg, #a8e063, #56ab2f); */
+/* background: linear-gradient(90deg, #396afc, #2948ff); */
+/* background: linear-gradient(90deg, #f7971e, #ffd200); */
+
+  color: white;
+}
+
+.custom-table thead th {
+  background: transparent !important;
+  white-space: nowrap;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+  
+}
+
+.custom-table td {
+  padding: 1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.custom-table td .d-flex {
+  overflow-x: auto;
+}
+
+
+/* For mobile overflow handling */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+
+/* Optional rounded corners */
+.table-responsive {
+  border-radius: 1rem;
+}
+
+
+.add-user-btn {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  border: none;
+  border-radius: 25px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.add-user-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}

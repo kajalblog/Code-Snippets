@@ -1,0 +1,30 @@
+<input type="text" [value]="title" (change)="onValueChange($event)">
+{{title}}
+
+<div>
+    @for(user of employeeList;track user.id)
+    {
+        @if( user.sallary >10000)
+        {
+      <h4> Name- {{user.name}}  Sallary - {{user.sallary}}</h4>
+
+        }
+        @else{
+
+            <h4> Name- {{user.name}}  Sallary - {{user.sallary}}</h4>
+        }
+    }
+</div>
+<hr>
+<div *ngFor="let user of employeeList;">
+    <h4 *ngIf="user.sallary >10000;else elseBlock"> Name- {{user.name}}  Sallary - {{user.sallary}}</h4>
+    <ng-template #elseBlock>
+        <h4> Name- {{user.name}}  Sallary - {{user.sallary}}</h4>
+
+    </ng-template>
+
+</div>
+<button (click)="onclear()">Clear Data</button>
+<!-- <app-user-profile userName="Rani" isAdmin="true" sallary="40000" (myEvent)="getChildData($event)"></app-user-profile> -->
+<!-- <app-user-profile userName="Rakesk" isAdmin="false" sallary="50000"></app-user-profile> -->
+<app-user-profile *ngFor="let user of employeeList;" [userName]="user.name"  [sallary]="user.sallary" (myEvent)="getChildData($event)" ></app-user-profile>

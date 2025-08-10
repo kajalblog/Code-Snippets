@@ -1,0 +1,25 @@
+<!-- Top header with close button on mobile -->
+<div class="d-flex justify-content-between align-items-center mb-3" *ngIf="isMobile">
+  <h5 class="mb-0 text-white">Garage Admin</h5>
+  <button class="btn btn-sm btn-close btn-close-white" (click)="closeSidebar()"></button>
+</div>
+
+<!-- Sidebar navigation -->
+ <div class="sidebar-menu">
+   @for (item of menuItems; track $index) {
+    <ul class="nav flex-column ">
+     <li class="nav-item mb-2">
+    <a class="nav-link" routerLink="/" routerLinkActive="active">
+      <i class="bi bi-speedometer2 me-2"></i> {{item.label}}
+    </a>
+  </li>
+
+  <!-- <li class="nav-item mb-2">
+    <a class="nav-link " routerLink="/users" routerLinkActive="active">
+      <i class="bi bi-people me-2"></i> Users
+    </a>
+  </li> -->
+  <!-- Add more items as needed -->
+</ul>
+}
+</div>

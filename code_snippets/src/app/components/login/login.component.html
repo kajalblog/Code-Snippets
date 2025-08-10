@@ -1,0 +1,29 @@
+<marquee behavior="scroll" direction="left" scrollamount="6">
+  🚗 Welcome to Auto Garage Admin Dashboard! 🚗
+</marquee>
+<div class="container-fluid vh-100 d-flex justify-content-center align-items-center garage-bg">
+  <div class="login-box p-4 rounded-4 shadow-lg glass-card">
+    <div class="text-center mb-4">
+      <!-- <img src="assets/icons/wrench-icon.png" alt="Garage Icon" width="60" class="mb-2"> -->
+      <h2 class="text-white fw-bold">Garage Login</h2>
+    </div>
+
+    <form (ngSubmit)="onLogin()">
+      <div class="mb-3">
+        <label class="form-label text-white">Username</label>
+        <input type="text" [(ngModel)]="loginUser.emailId" name="emailId" class="form-control bg-transparent text-white border-white" placeholder="Enter your username">
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label text-white">Password</label>
+        <input type="password" [(ngModel)]="loginUser.password" name="password" class="form-control bg-transparent text-white border-white" placeholder="Enter your password">
+      </div>
+
+      <button type="submit" class="btn btn-warning w-100 fw-semibold" (click)="onLogin()">Login</button>
+
+      <div class="text-center mt-3">
+        <a href="#" class="text-light small text-decoration-underline">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+</div>
